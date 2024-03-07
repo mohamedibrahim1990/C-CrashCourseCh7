@@ -1,0 +1,40 @@
+#include <iostream>
+#include <typeinfo>
+
+
+//perfect link
+https://eel.is/c++draft/
+
+/*int step(int input){
+    return input>0 ? 1:0;
+}*/
+
+int step(int input) {
+if (input > 0) {
+return 1;
+
+} else {
+return 0;
+}
+}
+
+int confusing(int&x){
+    return x=9, x++, x/2;
+}
+
+int main()  {
+    /*char x=10;
+    auto y= +x;
+    std::cout << typeid(y).name() << std::endl;
+    std::cout << "Hello" << std::endl;
+
+    int z=10;
+    auto z2= z/10.0f;
+    std::cout << typeid(z2).name() << std::endl;
+    z/=10.0f;
+    std::cout << typeid(z).name() << std::endl;*/
+
+    int x{};
+    auto y=confusing(x);
+    printf("x:%d\ny: %d", x, y);
+}
